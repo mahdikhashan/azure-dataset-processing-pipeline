@@ -1,0 +1,9 @@
+{
+	"name": "mahdikhashan1-df",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "86475714-67a4-4830-acf0-d5b58e8a3661",
+		"tenantId": "641b2539-5c39-4b97-8e7a-c701d8d38eaa"
+	}
+}
