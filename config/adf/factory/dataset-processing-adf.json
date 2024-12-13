@@ -1,0 +1,9 @@
+{
+	"name": "dataset-processing-adf",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2251cec7-cbc8-4e66-8ade-f19beb41e924",
+		"tenantId": "641b2539-5c39-4b97-8e7a-c701d8d38eaa"
+	}
+}
