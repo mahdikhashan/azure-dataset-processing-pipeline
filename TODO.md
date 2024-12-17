@@ -1,0 +1,3 @@
+- [x] setup env for python
+- [x] nix-shell for reproducibility
+- [] trigger a function when a file uploaded in a blob storage
