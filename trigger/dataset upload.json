@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "triggers the pipeline on dataset upload event",
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
