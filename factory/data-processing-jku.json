@@ -2,7 +2,9 @@
 	"name": "data-processing-jku",
 	"properties": {
 		"globalConfigurations": {
-			"PipelineBillingEnabled": "false"
+			"PipelineBillingEnabled": "false",
+			"factoryStagingLSReferenceName": "Dataset",
+			"factoryStagingLSType": "LinkedServiceReference"
 		}
 	},
 	"location": "westeurope"
