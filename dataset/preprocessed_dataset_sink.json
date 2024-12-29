@@ -1,5 +1,5 @@
 {
-	"name": "Preprocessed_Dataset",
+	"name": "preprocessed_dataset_sink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Dataset",

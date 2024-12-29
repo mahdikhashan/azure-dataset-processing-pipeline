@@ -1,5 +1,5 @@
 {
-	"name": "Raw_Dataset",
+	"name": "raw_dataset_source",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Dataset",

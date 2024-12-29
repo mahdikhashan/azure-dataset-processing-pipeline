@@ -7,7 +7,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "Dataset Processing",
+					"referenceName": "dataset_processing",
 					"type": "PipelineReference"
 				}
 			}

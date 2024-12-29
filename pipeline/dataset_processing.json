@@ -1,9 +1,9 @@
 {
-	"name": "Dataset Processing",
+	"name": "dataset_processing",
 	"properties": {
 		"activities": [
 			{
-				"name": "Duplicate Data",
+				"name": "duplicate_data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -36,13 +36,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Raw_Dataset",
+						"referenceName": "raw_dataset_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Preprocessed_Dataset",
+						"referenceName": "preprocessed_dataset_sink",
 						"type": "DatasetReference"
 					}
 				]
