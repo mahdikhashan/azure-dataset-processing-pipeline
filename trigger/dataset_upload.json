@@ -1,5 +1,5 @@
 {
-	"name": "dataset upload",
+	"name": "dataset_upload",
 	"properties": {
 		"description": "triggers the pipeline on dataset upload event",
 		"annotations": [],
