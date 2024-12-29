@@ -1,0 +1,9 @@
+{
+	"name": "data-processing-jku",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "false"
+		}
+	},
+	"location": "westeurope"
+}
