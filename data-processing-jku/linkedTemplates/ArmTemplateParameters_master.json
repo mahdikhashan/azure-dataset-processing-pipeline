@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "data-processing-jku"
+		},
+		"Dataset_connectionString": {
+			"value": ""
+		},
+		"dataset upload_properties_typeProperties_scope": {
+			"value": "/subscriptions/ae26c860-c4bc-4c0e-80d5-dc36838062f1/resourceGroups/datafactory-rg202/providers/Microsoft.Storage/storageAccounts/dataprocessing"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
