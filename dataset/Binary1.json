@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "09_mlops.pdf",
 				"container": "source"
 			}
 		}
