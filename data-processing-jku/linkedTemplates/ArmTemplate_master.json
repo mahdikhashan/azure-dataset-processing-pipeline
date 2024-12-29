@@ -11,7 +11,7 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Dataset'"
 		},
-		"dataset upload_properties_typeProperties_scope": {
+		"dataset_upload_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/ae26c860-c4bc-4c0e-80d5-dc36838062f1/resourceGroups/datafactory-rg202/providers/Microsoft.Storage/storageAccounts/dataprocessing"
 		},
@@ -45,8 +45,8 @@
 					"Dataset_connectionString": {
 						"value": "[parameters('Dataset_connectionString')]"
 					},
-					"dataset upload_properties_typeProperties_scope": {
-						"value": "[parameters('dataset upload_properties_typeProperties_scope')]"
+					"dataset_upload_properties_typeProperties_scope": {
+						"value": "[parameters('dataset_upload_properties_typeProperties_scope')]"
 					}
 				}
 			},

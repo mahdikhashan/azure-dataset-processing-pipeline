@@ -11,7 +11,7 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Dataset'"
 		},
-		"dataset upload_properties_typeProperties_scope": {
+		"dataset_upload_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/ae26c860-c4bc-4c0e-80d5-dc36838062f1/resourceGroups/datafactory-rg202/providers/Microsoft.Storage/storageAccounts/dataprocessing"
 		}
@@ -85,28 +85,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Raw_Dataset')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "Dataset",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "Binary",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"container": "source"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/Dataset')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/Preprocessed_Dataset')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -129,6 +107,28 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/Raw_Dataset')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Dataset",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"container": "source"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Dataset')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Dataset')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -142,7 +142,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/dataset upload')]",
+			"name": "[concat(parameters('factoryName'), '/dataset_upload')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -162,7 +162,7 @@
 				"typeProperties": {
 					"blobPathBeginsWith": "/source/blobs/",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('dataset upload_properties_typeProperties_scope')]",
+					"scope": "[parameters('dataset_upload_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]

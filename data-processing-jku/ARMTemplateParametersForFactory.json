@@ -8,7 +8,7 @@
 		"Dataset_connectionString": {
 			"value": ""
 		},
-		"dataset upload_properties_typeProperties_scope": {
+		"dataset_upload_properties_typeProperties_scope": {
 			"value": "/subscriptions/ae26c860-c4bc-4c0e-80d5-dc36838062f1/resourceGroups/datafactory-rg202/providers/Microsoft.Storage/storageAccounts/dataprocessing"
 		}
 	}
