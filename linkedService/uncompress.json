@@ -1,0 +1,11 @@
+{
+	"name": "uncompress",
+	"properties": {
+		"annotations": [],
+		"type": "AzureFunction",
+		"typeProperties": {
+			"functionAppUrl": "https://datasetprocessingunzip.azurewebsites.net",
+			"authentication": "Anonymous"
+		}
+	}
+}
