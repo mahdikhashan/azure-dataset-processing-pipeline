@@ -1,5 +1,5 @@
 {
-	"name": "preprocessed_dataset_sink",
+	"name": "workspace",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Dataset",
@@ -10,10 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "sink"
-			},
-			"compression": {
-				"type": "TarGZip"
+				"container": "workspace"
 			}
 		}
 	}
