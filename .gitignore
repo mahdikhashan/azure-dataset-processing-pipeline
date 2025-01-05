@@ -1,3 +1,5 @@
 .idea
 
 jobs/extract/data/output
+
+venv
