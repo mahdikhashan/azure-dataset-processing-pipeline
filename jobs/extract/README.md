@@ -18,3 +18,20 @@ docker build -t extract-job-data-pipeline ./extract/.
 ```bash
 docker run --rm -v $(pwd)/data:/data extract-job-data-pipeline:latest app.py -i /data/raw/0000.parquet -o /data/output/
 ```
+
+tag
+
+```bash
+docker tag extract-job-data-pipeline:latest datapipelinejobs.azurecr.io/jobs/extract
+```
+
+push to acr
+
+```bash
+az login
+az acr login --name datapipelinejobs
+```
+
+```bash
+docker push datapipelinejobs.azurecr.io/jobs/extract:latest
+```
