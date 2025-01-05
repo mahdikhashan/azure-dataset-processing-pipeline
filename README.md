@@ -16,10 +16,5 @@ nix-shell
 #### Documentation
 
 - [Proposal](./docs/PROPOSAL.md)
-- [processors](jobs/extract/README.md)
-- [Y](./docs/ARCH.md)
-- [Z](./docs/CHALLENGES.md)
 - Jobs
     - [extract](./jobs/extract/README.md)
-    - [B](./docs/ARGO.md)
-    - [C](./apps/registry/mlflow/README.md)
