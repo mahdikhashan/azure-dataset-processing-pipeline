@@ -10,6 +10,11 @@ pkgs.mkShell {
       virtualenv venv
     fi
     source venv/bin/activate
+
+    pip install pre-commit ruff PyYAML
     pip install -r ./jobs/extract/requirements.txt
+
+    ruff --version
+    pre-commit install
   '';
 }
