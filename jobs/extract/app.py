@@ -17,7 +17,7 @@ def extractParquetMetadata(file_path, output_dir):
     labels_file = os.path.join(output, "labels.csv")
     info_file = os.path.join(output, "info.txt")
 
-    with open(info_file, 'w') as f:
+    with open(info_file, "w") as f:
         buffer = StringIO()
         df.info(buf=buffer)
         dataframe_info = buffer.getvalue()
@@ -25,22 +25,28 @@ def extractParquetMetadata(file_path, output_dir):
 
     os.makedirs(images_dir, exist_ok=True)
 
-    labels = df['label'].values
-    with open(labels_file, 'w') as f:
+    labels = df["label"].values
+    with open(labels_file, "w") as f:
         f.write("Index,Label\n")  # Header
-        for idx, label in tqdm(enumerate(labels), total=len(labels), desc="Saving Labels"):
+        for idx, label in tqdm(
+            enumerate(labels), total=len(labels), desc="Saving Labels"
+        ):
             f.write(f"{idx},{label}\n")
 
-    for idx, image_data in tqdm(enumerate(df['image']), total=len(df['image']), desc="Saving Images"):
-        image_array = np.array(Image.open(io.BytesIO(image_data['bytes'])))
+    for idx, image_data in tqdm(
+        enumerate(df["image"]), total=len(df["image"]), desc="Saving Images"
+    ):
+        image_array = np.array(Image.open(io.BytesIO(image_data["bytes"])))
 
         image = Image.fromarray(image_array)
         image.save(os.path.join(images_dir, f"image_{idx}.png"))
 
-    print(f"Extraction complete! Metadata in '{info_file}', labels in '{labels_file}', and images in '{images_dir}'.")
+    print(
+        f"Extraction complete! Metadata in '{info_file}', labels in '{labels_file}', and images in '{images_dir}'."
+    )
 
 
-def createOutputFolder(outputPath:str):
+def createOutputFolder(outputPath: str):
     outputFolder = f"{outputPath}/output"
 
     try:
@@ -52,14 +58,17 @@ def createOutputFolder(outputPath:str):
         raise RuntimeError(f"Error: {e.__class__()}")
     return outputFolder
 
+
 if __name__ == "__main__":
     try:
         parser = argparse.ArgumentParser()
-        parser.add_argument("--inputFile", "-i",
-                            help="Set the file path for the raw bag file.")
-        parser.add_argument("--outputPath", "-o",
-                        help="Set the output path for the extracted contents.")
+        parser.add_argument(
+            "--inputFile", "-i", help="Set the file path for the raw bag file."
+        )
+        parser.add_argument(
+            "--outputPath", "-o", help="Set the output path for the extracted contents."
+        )
         args = parser.parse_args()
         extractParquetMetadata(args.inputFile, args.outputPath)
-    except Exception as e:
+    except Exception:
         raise RuntimeError("failed to extract metadata")
