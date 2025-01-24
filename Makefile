@@ -102,9 +102,8 @@ az-get-subscription-id:
 
 az-deploy-adf-pipeline:
 	sed -e "s/TEMP_AZ_BATCH_ACCOUNT_NAME/$AZ_BATCH_ACCOUNT_NAME/" -e "s|TEMP_AZ_BATCH_ACCOUNT_URL|$AZ_BATCH_ACCOUNT_URL|" -e "s/TEMP_AZ_BATCH_ORCHESTRATOR_POOL_ID/$AZ_BATCH_ORCHESTRATOR_POOL_ID/" infra/adf/linkedService/azurebatch_ls.json > infra/adf/linkedService/temp_azurebatch_ls.json
-	sed -e "s|<your-keyvault-name>|$(AZ_KEY_VAULT)|g" infra/adf/linkedService/akv_ls.json > infra/adf/linkedService/temp_akv_ls.json
 
-	jq . infra/adf/linkedService/temp_akv_ls.json
+	jq . infra/adf/linkedService/temp_azurebatch_ls.json
 
 	az datafactory linked-service create --debug --resource-group $(AZ_RESOURCE_GROUP) \
 		--factory-name $(AZ_DATAFACTORY_NAME) \
