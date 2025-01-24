@@ -34,5 +34,6 @@ Steps:
 
 - [Proposal](./docs/PROPOSAL.md)
 - [Deploy](./docs/DEPLOY.md)
-- Jobs
-    - [extract](scripts/README.md)
+- Scripts
+    - [extract_parquet_sas](./docs/EXTRACT_PARQUET_SAS.md)
+    - [manipulate_csv](./docs/MANIPULATE_CSV.md)
