@@ -24,6 +24,22 @@ make az-create-batch-account
 make az-add-pool-to-batch-account
 ```
 
+### Azure Data Factory
+
+```bash
+make az-create-datafactory
+```
+
+### Azure Storage Account
+
+```bash
+make az-create-storage-account
+```
+
+```bash
+make az-create-storage-container
+```
+
 #### Custom Python Modules
 
 - Add Requirements of the Nodes to `mypool.json`, for having a working node with Windows Data Science 2019, add all required python modules to be installed in the start task of nodes to line `29` of `mypool.json` file in `infra/batch/pool/` directory.
