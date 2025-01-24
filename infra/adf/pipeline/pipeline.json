@@ -15,7 +15,7 @@
         },
         "userProperties": [],
         "typeProperties": {
-          "command": "/bin/bash -c \"cd $AZ_BATCH_APP_PACKAGE_orchestratorapp_1_0_0/app && python3 extract.py --inputFile /data/raw/sample-data.bag --outputPath /data/extracted\"",
+          "command": "cmd /C python manipulate_csv_args.py iris.csv iris_setosa_modified.csv",
           "referenceObjects": {
             "linkedServices": [],
             "datasets": []
