@@ -1,7 +1,7 @@
 Azure Dataset Processing Pipeline
 ---
 
-![architecture](./docs/adf-data-pipeline.drawio.png)
+![architecture](./docs/adf-data-pipeline2.drawio.png)
 
 ### Setup and deployment
 
