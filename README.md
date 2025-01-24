@@ -33,6 +33,6 @@ Steps:
 #### Documentation
 
 - [Proposal](./docs/PROPOSAL.md)
-- [Deploy](./docs/DEPLOY)
+- [Deploy](./docs/DEPLOY.md)
 - Jobs
     - [extract](scripts/README.md)
