@@ -1,0 +1,31 @@
+{
+  "id": "mypool",
+  "displayName": "My Batch Pool",
+  "vmSize": "Standard_D2_v3",
+  "virtualMachineConfiguration": {
+    "imageReference": {
+      "publisher": "microsoft-dsvm",
+      "offer": "dsvm-win-2019",
+      "sku": "winserver-2019",
+      "version": "latest"
+    },
+    "nodeAgentSKUId": "batch.node.windows amd64"
+  },
+  "targetDedicatedNodes": 2,
+  "targetLowPriorityNodes": 0,
+  "taskSlotsPerNode": 1,
+  "taskSchedulingPolicy": {
+    "nodeFillType": "Spread"
+  },
+  "startTask": {
+    "commandLine": "cmd /c \"pip install azure-storage-blob pandas==2.2.3 numpy==2.2.1 pillow==11.1.0 pyarrow\"",
+    "userIdentity": {
+      "autoUser": {
+        "scope": "pool",
+        "elevationLevel": "admin"
+      }
+    },
+    "maxTaskRetryCount": 1,
+    "waitForSuccess": true
+  }
+}

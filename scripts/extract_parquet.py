@@ -5,7 +5,11 @@ import argparse
 import pandas as pd
 import numpy as np
 from PIL import Image
-from tqdm import tqdm
+
+
+connectionString = "DefaultEndpointsProtocol=https;AccountName=mypipelinestorageaccount;AccountKey=AfuOJyIUIYFN1+pW5vVqHgkTNbvcsYATisy7DfBqilUD3Kx5qBQOHC1MVM6Om5mLBflbR0W/hRv0+ASt78zQIw==;EndpointSuffix=core.windows.net"
+containerName = "out"
+outputFolder = "/"
 
 
 def extractParquetMetadata(file_path, output_dir):
@@ -28,14 +32,10 @@ def extractParquetMetadata(file_path, output_dir):
     labels = df["label"].values
     with open(labels_file, "w") as f:
         f.write("Index,Label\n")  # Header
-        for idx, label in tqdm(
-            enumerate(labels), total=len(labels), desc="Saving Labels"
-        ):
+        for idx, label in enumerate(labels):
             f.write(f"{idx},{label}\n")
 
-    for idx, image_data in tqdm(
-        enumerate(df["image"]), total=len(df["image"]), desc="Saving Images"
-    ):
+    for idx, image_data in enumerate(df["image"]):
         image_array = np.array(Image.open(io.BytesIO(image_data["bytes"])))
 
         image = Image.fromarray(image_array)

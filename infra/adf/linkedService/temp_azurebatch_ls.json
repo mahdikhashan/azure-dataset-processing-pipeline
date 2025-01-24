@@ -1,0 +1,13 @@
+{
+  "annotations": [],
+  "type": "AzureBatch",
+  "typeProperties": {
+    "batchUri": "Z_BATCH_ACCOUNT_URL",
+    "poolName": "Z_BATCH_ORCHESTRATOR_POOL_ID",
+    "accountName": "Z_BATCH_ACCOUNT_NAME",
+    "linkedServiceName": {
+      "referenceName": "AzureBlobStorage_LS",
+      "type": "LinkedServiceReference"
+    }
+  }
+}

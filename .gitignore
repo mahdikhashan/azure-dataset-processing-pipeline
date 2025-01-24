@@ -1,5 +1,5 @@
 .idea
 
-jobs/extract/data/output
+scripts/data/output
 
 venv

@@ -3,6 +3,7 @@ pkgs.mkShell {
   buildInputs = [
     pkgs.python311
     pkgs.azure-cli
+    pkgs.azure-cli-extensions.datafactory
   ];
 
   shellHook = ''
@@ -12,7 +13,7 @@ pkgs.mkShell {
     source venv/bin/activate
 
     pip install pre-commit ruff PyYAML
-    pip install -r ./jobs/extract/requirements.txt
+    pip install -r ./scripts/requirements.txt
 
     ruff --version
     pre-commit install
