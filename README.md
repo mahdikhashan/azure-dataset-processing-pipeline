@@ -11,23 +11,28 @@ Make sure nix package manager is available on host os and run the following comm
 nix-shell
 ```
 
-it will install Azure CLI, Python and requirements for jobs.
+it will setup local environments with Azure CLI, Python and requirements for jobs (scripts) to be tested on local.
+
+- add required python modules to `requirements.txt` for scripts in the `scripts` directory.
 
 #### Deployment
 
 Steps:
 
 - Deploy all resources to Azure
+- Generate Connection string for blob account
+- Copy Scripts to the `scripts` blob
+- Run Pipeline
 
 ---
 
 #### Debug
 
-- give IAM permission to log length of a path in a blob
+- while working on the project, I was in need to monitor steps and deubg/make sure everything is correctly set up. for further information, check commands in `Makefile` with `debug` prefix.
 
 #### Documentation
 
 - [Proposal](./docs/PROPOSAL.md)
-- [Setup]()
+- [Deploy](./docs/DEPLOY)
 - Jobs
     - [extract](scripts/README.md)
