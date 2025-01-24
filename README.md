@@ -32,7 +32,6 @@ Steps:
 
 #### Documentation
 
-- [Proposal](./docs/PROPOSAL.md)
 - [Deploy](./docs/DEPLOY.md)
 - Scripts
     - [extract_parquet_sas](./docs/EXTRACT_PARQUET_SAS.md)
