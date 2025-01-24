@@ -30,6 +30,10 @@ Steps:
 
 - while working on the project, I was in need to monitor steps and deubg/make sure everything is correctly set up. for further information, check commands in `Makefile` with `debug` prefix.
 
+#### Issues
+
+- https://github.com/mahdikhashan/azure-dataset-processing-pipeline/issues/2
+
 #### Documentation
 
 - [Deploy](./docs/DEPLOY.md)
