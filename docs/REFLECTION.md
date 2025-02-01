@@ -14,6 +14,12 @@ start by splitting the project to small portions (like 10 parts) to be eaiser to
 - I used python for scripts and I'm really happy
 - I could test my python scripts on local and it was really good to see whether they work or not
 
+What is still unclear?
+
+- custom application for Azure Batch
+- Docker for scripts
+- How to work on a large dataset for example xxxGB or TB? for example how to connect the container to the Nodes?
+
 Next steps:
 
 - learn about datawarehousiing and implement one based upon this project
@@ -22,5 +28,6 @@ Next steps:
 - have a DAG for datasets, explore pre-processing
 - explore a really large dataset for example 1GB
 - explore report generation or visulization
+- explore GPU nodes
 
 - write a blog post for this current solution
