@@ -1,4 +1,4 @@
-Azure Dataset Processing Pipeline
+Azure Batch Processing Pipeline
 ---
 
 ![architecture](./docs/adf-data-pipeline2.drawio.png)
